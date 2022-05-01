@@ -58,9 +58,10 @@ const Header = () => (
       className="app__header-circles"
     >
       {[Images.figma, Images.xd, Images.sass].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
+        <motion.div className="circle-cmp app__flex" key={`circle-${index}`} whileHover={{scale:1.1}}>
           <img src={circle} alt="profile_bg" />
-        </div>
+          
+        </motion.div>
       ))}
     </motion.div>
   </div>
