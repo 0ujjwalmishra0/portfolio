@@ -3,15 +3,21 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
+  --color-bg: #1f1f38;
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
+
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
-  --lightpink-color: #EFE1D8;
+  --lightpink-color: #f06209;
+  --lightpink-color2: #FDD4CE;
 
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --color-light:rgba(255,255,255,0.6);
+
+  --transition: all 400ms ease;
 }
 
 * {
@@ -19,4 +25,17 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover{
+  color: var(--white-color)
 }

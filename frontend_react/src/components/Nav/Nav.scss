@@ -1,0 +1,36 @@
+nav {
+    // background: rgba(248, 165, 179, 0.8);
+    background: rgba(87, 150, 226, 0.7);
+    width: max-content;
+    display: block;
+    padding: 0.5rem 0.3rem ;
+    z-index: 2;
+    position: fixed;
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    font-weight: 800;
+    
+
+    a{
+        background: transparent;
+        padding: 0.9rem;
+        border-radius: 50%;
+        display: flex;
+        color: var(--color-light);
+        font-size: 1.2rem;
+        &:hover{
+            // background:  rgba(255, 192, 203,1.4);
+            background: rgba(69, 126, 195,1);
+
+        }
+    }
+    .active{
+        background: var(--light-pink-color2);
+        color: white;
+    }
+}

@@ -15,13 +15,18 @@ export default {
         type: 'string',
       },
       {
-        name: 'projectLink',
-        title: 'Project Link',
+        name: 'adobeLink',
+        title: 'Adobe XD Link',
         type: 'string',
       },
       {
-        name: 'codeLink',
-        title: 'Code Link',
+        name: 'behanceLink',
+        title: 'Behance Link',
+        type: 'string',
+      },
+      {
+        name: 'dribbleLink',
+        title: 'Dribble Link',
         type: 'string',
       },
       {

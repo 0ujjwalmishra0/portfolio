@@ -22,18 +22,19 @@ const Header = () => (
       className="app__header-info"
     >
       <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
+        <motion.div className="badge-cmp app__flex" whileHover={{scale:1.1}}>
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Meenal</h1>
+            {/* <h1 className="head-text">Meenal</h1> */}
+            <img src={Images.sign} height='50' alt='name'></img>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="tag-cmp app__flex">
+        <motion.div className="tag-cmp app__flex" whileHover={{scale:1.1}}>
           <p className="p-text">UI/UX Designer</p>
           <p className="p-text">Freelancer</p>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
 
@@ -42,7 +43,7 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={Images.profile} alt="profile_bg" />
+      <img src={Images.meenal} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
@@ -57,7 +58,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[Images.figma, Images.xd, Images.sass].map((circle, index) => (
+      {[Images.figma, Images.xd, Images.illustrator].map((circle, index) => (
         <motion.div className="circle-cmp app__flex" key={`circle-${index}`} whileHover={{scale:1.1}}>
           <img src={circle} alt="profile_bg" />
           
