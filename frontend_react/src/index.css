@@ -3,7 +3,8 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
-  --color-bg: #1f1f38;
+  --color-bg: rgba(87, 150, 226, 0.7);
+
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
 

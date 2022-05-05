@@ -1,0 +1,42 @@
+export default {
+    name:'education',
+    title:'Education',
+    type: 'document',
+    fields:[
+        {
+            name:'index',
+           title:'Index',
+           type:'string'
+        },
+            {
+                name:'year',
+               title:'Date',
+               type:'string'
+            },
+           {
+               name:'board',
+               title:'Board',
+               type:'string'
+            },
+            {
+                name:'location',
+                title:'Location',
+                type:'string'
+            },
+            {
+                name:'school',
+                title:'School',
+                type:'string'
+            },
+            {
+                name:'desc',
+                title:'Desc',
+                type:'string'
+            },
+            {
+                name:'tag',
+                title:'tag',
+                type:'string'
+            }
+    ]
+}

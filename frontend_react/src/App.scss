@@ -9,8 +9,7 @@
   
   .app__primarybg {
     background-color: var(--primary-color);
-  }
-  
+  }  
   .app__container {
     width: 100%;
     min-height: 100vh;
@@ -29,10 +28,10 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
   
     @media screen and (max-width: 450px) {
-      padding: 4rem 1rem 2rem;
+      padding: 2rem 1rem 2rem;
     }
   }
   

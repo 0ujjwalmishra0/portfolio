@@ -7,12 +7,12 @@ const App  =() =>{
     return (
         <div className='app'>
         {/* <Navbar/> */}
-        
         <Header/>
         <Nav/>
-        <About/>
+        {/* <About/> */}
+        
+        <Skills/>
         <Work/>
-        {/* <Skills/> */}
         <Testimonial/>
         <Footer/>
         </div>

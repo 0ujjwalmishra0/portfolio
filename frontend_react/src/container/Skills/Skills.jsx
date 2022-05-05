@@ -1,93 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import ReactTooltip from "react-tooltip";
 
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Skills.scss';
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { urlFor, client } from "../../client";
+import "./Skills.scss";
+import Images from "../../constants/images";
+import DownloadButton from "../../components/button/button";
+import { Timeline } from "../../components";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
-  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
-    });
-
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
     });
   }, []);
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">About <span>Me</span></h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills.map((skill) => (
+          {/* <img src={Images.mobile}></img> */}
+          <div className="app__header-skills">
             <motion.div
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="app__skills-item app__flex"
-              key={skill._key}
+              transition={{ duration: 0.5, delayChildren: 0.5 }}
+              className="app__skills-header-img"
             >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
-              >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+              <div className="app__header-img2">
+               <img src={Images.meenal2} alt="profile_bg" /> 
+            <motion.img
+              whileInView={{ scale: [0, 1] }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              src={Images.blob}
+              alt="profile_circle"
+              className="skill-overlay_circle"
+            /> 
               </div>
-              <p className="p-text">{skill.name}</p>
+            <DownloadButton className="app__header-img2"/>
             </motion.div>
-          ))}
+            
+          </div>
         </motion.div>
-        <div className="app__skills-exp">
-          {experiences.map((work) => (
-            <motion.div
-              className="app__skills-exp-item"
-              key={work._key}
-            >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{work.year}</p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                  <>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                      className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.position}
-                      key={work._key}
-                    >
-                      <h4 className="bold-text">{work.company}</h4>
-                      <p className="p-text">{work.position}</p>
-                    </motion.div>
-                    <ReactTooltip
-                      id={work.position}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip>
-                  </>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+
+        <Timeline className="app__skills-exp" />
       </div>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg',
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
 );

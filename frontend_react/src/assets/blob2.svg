@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g transform="matrix(1, 0, 0, 1, 247.927524, -0.777784)">
+    <path class="blob" d="M 779.772 363.351 C 569.159 471.609 464.149 418.023 464.74 202.595 C 465.332 -12.834 570.638 -66.963 780.659 40.208 C 990.682 147.377 990.385 255.091 779.772 363.351 Z" fill="#FFD6E8" style="" transform="matrix(0.999933, 0.011541, -0.011541, 0.999933, 2.380675, -8.08077)"/>
+    <g transform="matrix(1.043583, 0, 0, 1, -281.281525, 4.657926)" style="">
+      <path class="blob" d="M313,349.5Q135,449,135.5,251Q136,53,313.5,151.5Q491,250,313,349.5Z" fill="#FFD6E8"/>
+    </g>
+    <image width="397" height="397" x="-198.684" y="23.378" style="" transform="matrix(0.600828, 0, 0, 0.575401, -28.552597, 109.983604)" xlink:href=""/>
+  </g>
+</svg>

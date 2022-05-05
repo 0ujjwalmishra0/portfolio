@@ -4,13 +4,13 @@ export default {
     type: 'document',
     fields:[
         {
-            name: 'resume',
-            title: 'Title',
+            name: 'name',
+            title: 'Name',
             type: 'string',
           },
         {
-            name: 'title',
-            title: 'Title',
+            name: 'resume',
+            title: 'Resume',
             type: 'file',
           },
     ]
